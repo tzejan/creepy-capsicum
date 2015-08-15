@@ -73,4 +73,6 @@ void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, siz
         startIndex = 0;
         count = 0;
     }
+	//trying to commit
+	//lizhaoyuan
 }
