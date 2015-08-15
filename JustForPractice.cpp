@@ -40,12 +40,15 @@ void main() {
 void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, size_t& startIndex, unsigned int& count)
 {
     int money = S;
+    const size_t i = S;
     size_t anotherIndex = startIndex;
     size_t count2 = count;
+    size_t b = 0;
 
     if ( S > 0 ) {
         for ( size_t a = 0; a < prices.size(); ++a) {
-            for ( size_t b = 0; b < prices.size(); ++b) {
+            b = a;
+            for ( ; b < prices.size(); ++b) {
                 if ( (money - prices[b]) < 0 ) {
                     break;
                 }
@@ -56,7 +59,12 @@ void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, siz
 
                 break;
             }
-
+            else {
+                money = i;
+                anotherIndex = startIndex;
+                count2 = count;
+                ++startIndex;
+            }
         }
     }
     // Refer to Part 5 of Assignment 02
