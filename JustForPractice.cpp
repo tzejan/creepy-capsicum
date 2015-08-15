@@ -41,7 +41,18 @@ void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, siz
 {
     int money = S;
     if ( S > 0 ) {
-        for ( int a = 0; a < prices.size(); ++a) {
+        for ( size_t a = 0; a < prices.size(); ++a) {
+            for ( size_t b = 0; b < prices.size(); ++b) {
+                if ( (money - prices[b]) < 0 ) {
+                    break;
+                }
+                money -= prices[b];
+                ++count;
+            }
+            if ( money == 0) {
+
+                break;
+            }
 
         }
     }
