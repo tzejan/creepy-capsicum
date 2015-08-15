@@ -47,7 +47,7 @@ void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, siz
     }
     // Refer to Part 5 of Assignment 02
     else {
-    startIndex = 0;
-    count = 0;
+        startIndex = 0;
+        count = 0;
     }
 }
