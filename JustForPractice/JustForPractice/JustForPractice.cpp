@@ -39,7 +39,7 @@ void main() {
 
 void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, size_t& startIndex, unsigned int& count)
 {
-
+    int money = S;
     // Refer to Part 5 of Assignment 02
     startIndex = 0;
     count = 0;
