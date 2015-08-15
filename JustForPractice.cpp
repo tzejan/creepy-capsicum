@@ -14,8 +14,8 @@ void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, siz
 
 void main() {
         // Part 5
-    int simoleon = 12;
-    const int pricesArray[] = {2,1,3,4,5};
+    int simoleon = 9;
+    const int pricesArray[] = {7,3,5,6};
     vector<unsigned short> prices(pricesArray, pricesArray + sizeof(pricesArray) / sizeof(pricesArray[0]));
     size_t startIndex = 0;
     unsigned int count = 0;
@@ -56,8 +56,7 @@ void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, siz
                 ++count;
             }
             if ( money == 0) {
-                startIndex = anotherIndex;
-                count = count2;
+
                 break;
             }
             else {
@@ -65,7 +64,7 @@ void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, siz
                 anotherIndex = startIndex;
                 count2 = count;
                 count = 0;
-                ++startIndex;
+                ++startIndex;            
             }
         }
     }
