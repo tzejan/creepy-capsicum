@@ -40,6 +40,9 @@ void main() {
 void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, size_t& startIndex, unsigned int& count)
 {
     int money = S;
+    size_t anotherIndex = startIndex;
+    size_t count2 = count;
+
     if ( S > 0 ) {
         for ( size_t a = 0; a < prices.size(); ++a) {
             for ( size_t b = 0; b < prices.size(); ++b) {
