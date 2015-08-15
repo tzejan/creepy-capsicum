@@ -56,13 +56,15 @@ void BiggestPlot(const unsigned int S, const vector<unsigned short>& prices, siz
                 ++count;
             }
             if ( money == 0) {
-
+                startIndex = anotherIndex;
+                count = count2;
                 break;
             }
             else {
                 money = i;
                 anotherIndex = startIndex;
                 count2 = count;
+                count = 0;
                 ++startIndex;
             }
         }
